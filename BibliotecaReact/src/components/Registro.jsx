@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/login.css";
-import { auth } from "../firebase";
+//import { auth } from "../firebase";
 
 const Registro = (props) => {
   const [nombre, setNombre] = React.useState("");
@@ -34,7 +34,7 @@ const Registro = (props) => {
     }
     setError(null);
   };
-  const registrar = React.useCallback(async () => {
+  /*const registrar = React.useCallback(async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(correo, clave);
       console.log(res.user);
@@ -48,7 +48,7 @@ const Registro = (props) => {
       }
     }
   }, [correo, clave]);
-
+*/
   return (
     <div className="App-login">
       <div className="sectionLeft">
@@ -105,7 +105,7 @@ const Registro = (props) => {
                 onChange={(e) => setClave(e.target.value)}
                 value={clave}
               />
-              <button type="submit" className="buttonLogin" onClick={registrar}>
+              <button type="submit" className="buttonLogin" /*onClick={registrar}*/>
                 Sign In
               </button>
             </form>
